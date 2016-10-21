@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" >
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <title>Fundamental Way</title>
+      <link href="css/style.css" rel="stylesheet" >
+      <!-- Bootstrap -->
+      <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+
+  <body ng-controller="MainController as MainCtrl">
+
+    <!-- navigation panel -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-main">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Fundamental Way</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbar-collapse-main">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">Start</a></li>
+            <li><a href="#truth">Truth</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- first section - Home -->
+    <article id="home" class="home">
+      <div class="text-vcenter">
+        <h1>Find your soul</h1><br>
+        <a href="#about" class="btn btn-default btn-lg">Start</a>
+      </div>
+    </article> <!-- /first section -->
+
+    <!-- second section - About -->
+    <article id="about" class="pad-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 text-center">
+            <h2>Who are you?</h2>
+            <p class="lead">Don't pretend! Don't think too much! <br>See true picture of yourself.</p><h5>Be carefu, you can not change the answers after marking them. <br>There are 16 questions.</h5>
+          </div>
+        </div>
+      </div>
+    </article><!-- /second section -->
+    
+    <!-- third section - Test // "test=information" -->
+    <article id="information" class="pad-section">
+      <section class="container">
+        <section class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 1</h2>
+              </div>
+              <div class="panel-body lead">
+                Independence is more important than the friendship.<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,1,2)">Yes</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('y',1,2)">No</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 2</h2>
+              </div>
+              <div class="panel-body lead">
+                Relation with someone is more important than saying the thruth.<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('y',3,4)">Yes</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,3,4)">No</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 3</h2>
+              </div>
+              <div class="panel-body lead">
+                Not to hurt somebody is more important than stay near facts (sometimes you can lie).<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('y',5,6)">Yes</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,5,6)">No</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 4</h2>
+              </div>
+              <div class="panel-body lead">
+                We should not criticise friends, if that makes them suffer.("No" means we can criticise friends).<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('y',7,8)">Yes</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,7,8)">No</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 5</h2>
+              </div>
+              <div class="panel-body lead">
+                I'm never afraid of telling as it is to others.<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,9,10)">Yes</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('y',9,10)">No</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 6</h2>
+              </div>
+              <div class="panel-body lead">
+                Pepole are more important than facts.<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('y',11,12)">Yes</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,11,12)">No</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 7</h2>
+              </div>
+              <div class="panel-body lead">
+                Freedom is the most important thing in life.<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,13,14)">Yes</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('y',13,14)">No</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 8</h2>
+              </div>
+              <div class="panel-body lead">
+                Relations are the most important thing in life.<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('y',15,16)">Yes</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,15,16)">No</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section> <!-- container -->
+    </article><!-- third section -->
+
+    <!-- section - FOUR PICTURE -->
+    <article class="pad-section">
+      <section class="container">
+        <div class="row">
+          
+          <div class="col-xm-10 .col-sm-9 text-center">
+            <p class="lead choose">Choose a pic that fits you.</p>
+            <p class="lead good" style="display:none" >OK, you chose a picture.</p>
+          </div>
+          <div class="container-fluid">
+            <div class="row" >
+                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                    <a href="" ng-click="MainCtrl.pressedImg('x')" role="button"><img class="img" src="assets/king.jpg"></a>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                    <a href="" ng-click="MainCtrl.pressedImg('y')" role="button"><img class="img" src="assets/family.jpg" ></a>
+                    </div>
+                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                    <a href="" ng-click="MainCtrl.pressedImg('xy')" role="button"><img class="img" src="assets/guru.jpg"></a>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3">
+                    <a href="" ng-click="MainCtrl.pressedImg()" role="button"><img class="img" src="assets/analityk.jpg"></a>
+                </div>      
+            </div>
+          </div>
+        </div>
+      </section>
+    </article>
+
+    <article id="information1" class="pad-section">
+      <section class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 9</h2>
+              </div>
+              <div class="panel-body lead">
+                Friendship is more important than my main aim in life.<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,17,18)">Yes</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('x',17,18)">No</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 10</h2>
+              </div>
+              <div class="panel-body lead">
+                Power is what I want in life.<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('x',19,20)">Yes</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,19,20)">No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 11</h2>
+              </div>
+              <div class="panel-body lead">
+                Truely sayig, I know how to make everybody feel happy.<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('x',21,22)">Yes</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,21,22)">No</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 12</h2>
+              </div>
+              <div class="panel-body lead">
+                I don't like to fight with others.(Click "No" if you don't mind fight.)<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,23,24)">Yes</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('x',23,24)">No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 13</h2>
+              </div>
+              <div class="panel-body lead">
+                I was born to tell people what to do, and when.<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('x',25,26)">Yes</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,25,26)">No</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 14</h2>
+              </div>
+              <div class="panel-body lead">
+                I prefer to stay silent, instead of takeing responsibility.<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,27,28)">Yes</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('x',27,28)">No</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 15</h2>
+              </div>
+              <div class="panel-body lead">
+                I'm not afraid of confrontation, when I want to reach my aim.<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('x',29,30)">Yes</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,29,30)">No</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h2 class="panel-title">Question 16</h2>
+              </div>
+              <div class="panel-body lead">
+                Better to die in fight, than live as a coward.<br><br>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton('x',31,32)" >That's true!</button>
+                <button class="btn btn-default" type="submit" ng-click="MainCtrl.pressedButton(0,31,32)" >No</button>
+
+              </div>
+            </div>
+          </div>
+        </div> 
+      </section> <!-- container -->
+    </article><!-- /fourth section -->
+
+    <article id="truth" class="parallax1">
+        <div class="par-h1">The Truth about You<br><br>
+        
+        <!-- Button trigger modal -->
+            <button type="button" class="btn btn-danger btn-lg" data-toggle="modal" data-target="#myModal" aria-labelledby="myModalLabel" ng-click="MainCtrl.seeTruth()">Show me</button>
+
+            <!-- modalwith result -->
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <king ng-show="MainCtrl.king"></king>
+                        <inteligent ng-show="MainCtrl.inteligent"></inteligent>
+                        <lider ng-show="MainCtrl.lider"></lider>
+                        <soul ng-show="MainCtrl.soul"></soul>
+                        <empty ng-show="MainCtrl.empty"></empty>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+        </div>
+    </article>
+    <footer>
+        <div><p>Wszystko, co zawiera strona jest prawdą i może stać się podstawą do wszczęcia procesu w Sądzie Rejonowym w Świdniku. Jeśli coś Cię niepokoi lub Ci nie odpowiada zgłoś sie do psychiatry. <p>&copy; USA Departament of Justice. 2016.</p></div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/myApp.js"></script>
+    <script src="js/mainCtrl.js" ></script>
+    <script src="js/services/addAnswer.js" ></script>
+    <script src="js/services/changebutton.js" ></script>
+    <script src="js/services/answerProcessor.js" ></script>
+    <script src="js/services/changeImg.js" ></script>
+    <script src="js/directives/inteligent.js" ></script>
+    <script src="js/directives/king.js" ></script>
+    <script src="js/directives/lider.js" ></script>
+    <script src="js/directives/soul.js" ></script>
+    <script src="js/directives/empty.js" ></script> 
+
+</body>
+</html>

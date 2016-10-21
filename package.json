@@ -1,0 +1,23 @@
+{
+  "name": "project4",
+  "version": "1.0.0",
+  "description": "app find the fundamental thought you follow in life",
+  "main": "index.html",
+  "dependencies": {
+    "angular": "^1.5.7",
+    "bower": "^1.7.9"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "life",
+    "sens",
+    "wisdom"
+  ],
+  "author": "Tim Block",
+  "license": "ISC"
+}
